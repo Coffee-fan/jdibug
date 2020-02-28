@@ -24,7 +24,7 @@
           (let* ((el-file (concat file ".el"))
                  (out-file (concat jdibug-build-directory "/" el-file))
                  (max-specpdl-size 20000))
-            (copy-file el-file jdibug-build-directory 'overwrite)
+            (copy-file el-file (concat jdibug-build-directory "/") 'overwrite)
             (byte-compile-file out-file)))
         jdibug-build-files)
 
